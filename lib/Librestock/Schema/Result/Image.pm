@@ -1,9 +1,10 @@
 package Librestock::Schema::Result::Image;
 
-use File::Spec::Functions 'catdir';
-use File::ShareDir::ProjectDistDir;
+use Path::Class::File;
 use Librestock::Schema::Candy
   -components => ['InflateColumn::FS'];
+
+__PACKAGE__->mk_group_accessors(inherited => qw/image_file_path/);
 
 table 'image';
 
@@ -35,8 +36,6 @@ column contributor_id => {
   file => {
     data_type => 'varchar',
     is_fs_column => 1,
-    fs_column_path =>
-      catdir(dist_dir(__PACKAGE__), 'image_files'),
   };
 
 belongs_to contributor => (
@@ -50,6 +49,18 @@ has_many download_rs => (
 
 many_to_many members_who_downloaded => (
   'download_rs', 'member');
+
+
+sub _fs_column_storage {
+  my ($self, @args) = @_;
+  my $part = $self->next::method(@args);
+  my $path = Path::Class::File->new($self->image_file_path, $part);
+
+  warn $self->image_file_path;
+  warn $path;
+
+  return $path;
+}
 
 1;
 
