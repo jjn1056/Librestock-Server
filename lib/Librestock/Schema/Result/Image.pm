@@ -1,14 +1,15 @@
 package Librestock::Schema::Result::Image;
 
-use Librestock::Schema::Candy;
+use File::Spec::Functions 'catdir';
+use File::ShareDir::ProjectDistDir;
+use Librestock::Schema::Candy
+  -components => ['InflateColumn::FS'];
 
 table 'image';
 
-column image_id => {
+primary_column image_id => {
   data_type => "integer",
   is_auto_increment => 1};
-
-primary_key 'image_id';
 
 column contributor_id => {
   data_type => "integer",
@@ -16,14 +17,33 @@ column contributor_id => {
 
   license_id => {
     data_type => "integer",
-    is_foreign_key => 1};
+    is_foreign_key => 1},
 
+  title => {
+    data_type => "varchar",
+    size => 64},
 
-belongs_to contributor =>
-  ('::Contributor', 'contributor_id');
+  description => {
+    data_type => "text"},
 
-belongs_to license =>
-  ('::License', 'license_id');
+  file => {
+    data_type => 'varchar',
+    is_fs_column => 1,
+    fs_column_path =>
+      catdir(dist_dir(__PACKAGE__), 'image_files'),
+  };
+
+belongs_to contributor => (
+  '::Contributor', 'contributor_id');
+
+belongs_to license => (
+  '::License', 'license_id');
+
+has_many download_rs => (
+  '::Download',  'image_id');
+
+many_to_many users_who_downloaded => (
+  'download_rs', 'user');
 
 1;
 

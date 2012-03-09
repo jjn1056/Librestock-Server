@@ -1,17 +1,30 @@
 package Librestock::Schema::Result::Account;
 
-use Librestock::Schema::Candy;
+use Librestock::Schema::Candy
+  -components => ['EncodedColumn'];
 
 table 'account';
 
-column account_id => {
+primary_column account_id => {
   data_type => "integer",
   is_auto_increment => 1};
 
-primary_key 'account_id';
+unique_column email => {
+  data_type => 'varchar',
+  size => '96'},
 
-might_have contributor =>
-  ( '::Contributor', 'account_id');
+column password => {
+    data_type => 'char',
+    size => 40,
+    encode_column => 1,
+    encode_check_method => 'check_password',
+    encode_class => 'Digest',
+    encode_args => {
+      format => 'hex',
+      algorithm => 'SHA-1'}};
+
+might_have contributor => (
+  '::Contributor', 'account_id');
 
 1;
 

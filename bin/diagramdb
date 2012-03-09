@@ -3,6 +3,7 @@
 use Modern::Perl;
 use SQL::Translator;
 use Librestock::Schema;
+use Librestock::Web;
 
 my $schema = Librestock::Schema->connect();
 my $trans = SQL::Translator->new(
@@ -12,7 +13,7 @@ my $trans = SQL::Translator->new(
     producer      => 'Diagram',
     producer      => 'GraphViz',
     producer_args => {
-        out_file         => 'db-diagram-v' . $schema->VERSION . '.png',
+        out_file         => Librestock::Web->path_to('share', 'docs', 'db-diagram-v' . $schema->VERSION . '.png'),
         bgcolor          => 'lightgoldenrodyellow',
         layout           => 'neato',
         show_constraints => 1,

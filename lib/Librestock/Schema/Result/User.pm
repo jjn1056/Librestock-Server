@@ -4,11 +4,9 @@ use Librestock::Schema::Candy;
 
 table 'user';
 
-column user_id => {
+primary_column user_id => {
   data_type => "integer",
   is_auto_increment => 1};
-
-primary_key 'user_id';
 
 column account_id => {
   data_type => "integer",

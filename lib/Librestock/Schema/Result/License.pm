@@ -4,17 +4,19 @@ use Librestock::Schema::Candy;
 
 table 'license';
 
-column license_id => {
+primary_column license_id => {
   data_type => "integer",
   is_auto_increment => 1};
 
-primary_key 'license_id';
+column title => {
+    data_type => "varchar",
+    size => 64},
 
-might_have is_default_for_contributor =>
-  ( '::Contributor', 'license_id');
+  description => {
+    data_type => "text"};
 
-has_many image_rs =>
-  ( '::Image', 'license_id');
+has_many image_rs => (
+  '::Image', 'license_id');
 
 1;
 

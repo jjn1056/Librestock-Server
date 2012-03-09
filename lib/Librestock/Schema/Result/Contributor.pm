@@ -4,22 +4,19 @@ use Librestock::Schema::Candy;
 
 table 'contributor';
 
-column contributor_id => {
+primary_column contributor_id => {
   data_type => "integer",
   is_auto_increment => 1};
-
-primary_key 'contributor_id';
 
 column account_id => {
   data_type => "integer",
   is_foreign_key => 1},
 
-  license_id => {
-    data_type => "integer",
-    is_foreign_key => 1};
+  proper_name => {
+    data_type => "varchar",
+    size => 96};
 
 belongs_to account => ( '::Account', 'account_id');
-belongs_to default_license => ( '::License', 'license_id');
 might_have image_rs => ( '::Image', 'contributor_id');
 
 1;
