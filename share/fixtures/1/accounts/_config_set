@@ -1,0 +1,29 @@
+$VAR1 = {
+          'sets' => [
+                      {
+                        'might_have' => {
+                                          'quantity' => 'all',
+                                          'fetch' => 1
+                                        },
+                        'belongs_to' => {
+                                          'quantity' => 'all',
+                                          'fetch' => 1
+                                        },
+                        'quantity' => 'all',
+                        'class' => 'Account',
+                        'has_many' => {
+                                        'quantity' => 'all',
+                                        'fetch' => 1
+                                      }
+                      }
+                    ],
+          'might_have' => {
+                            'fetch' => 0
+                          },
+          'belongs_to' => {
+                            'fetch' => 1
+                          },
+          'has_many' => {
+                          'fetch' => 0
+                        }
+        };

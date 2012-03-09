@@ -1,0 +1,21 @@
+{
+   "sets" : [
+      {
+         "quantity" : "all",
+         "class" : "Account",
+           "might_have" : {
+              "fetch" : 1,
+              "quantity" : "all"
+           },
+           "belongs_to" : {
+              "fetch" : 1,
+              "quantity" : "all"
+           },
+           "has_many" : {
+              "fetch" : 1,
+              "quantity" : "all"
+           }
+      }
+   ]
+}
+

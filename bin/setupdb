@@ -25,14 +25,16 @@ my $contributor = $schema->resultset('Contributor')
       password=>'abc123'}});
 
 
-open(my $fh, '<', $FindBin::Bin) ||
+my $file = $FindBin::Bin;
+open(my $fh, '<', "$file/setupdb") ||
   die "Can't open the filehandle, test is trash!";
 
-$contributor->create_related('image_rs', {
-  license => {title => 'Attribution'},
-  file => $fh,
-  title => '',
-  description => ''});
+$contributor->create_related(
+  'image_rs', {
+    license => {title => 'Attribution'},
+    file => $fh,
+    title => '1',
+    description => '2'});
 
 close($fh);
 
