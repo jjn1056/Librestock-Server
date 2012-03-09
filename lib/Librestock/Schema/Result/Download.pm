@@ -4,7 +4,7 @@ use Librestock::Schema::Candy;
 
 table 'download';
 
-column user_id => {
+column member_id => {
   data_type => "integer",
   is_foreign_key => 1},
 
@@ -16,10 +16,10 @@ column user_id => {
     data_type => "datetime",
     datetime_undef_if_invalid => 1};
 
-primary_key 'user_id', 'image_id';
+primary_key 'member_id', 'image_id';
 
-belongs_to user => (
-  '::User', 'user_id');
+belongs_to member => (
+  '::Member', 'member_id');
 
 belongs_to image => (
   '::Image', 'image_id');

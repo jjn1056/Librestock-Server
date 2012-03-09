@@ -14,17 +14,20 @@ unique_column email => {
   size => '96'},
 
 column password => {
-    data_type => 'char',
-    size => 40,
-    encode_column => 1,
-    encode_check_method => 'check_password',
-    encode_class => 'Digest',
-    encode_args => {
-      format => 'hex',
-      algorithm => 'SHA-1'}};
+  data_type => 'char',
+  size => 40,
+  encode_column => 1,
+  encode_check_method => 'check_password',
+  encode_class => 'Digest',
+  encode_args => {
+    format => 'hex',
+    algorithm => 'SHA-1'}};
 
 might_have contributor => (
   '::Contributor', 'account_id');
+
+might_have member => (
+  '::Member', 'account_id');
 
 1;
 

@@ -16,8 +16,11 @@ column account_id => {
     data_type => "varchar",
     size => 96};
 
-belongs_to account => ( '::Account', 'account_id');
-might_have image_rs => ( '::Image', 'contributor_id');
+belongs_to account => (
+  '::Account', 'account_id');
+
+might_have image_rs => (
+  '::Image', 'contributor_id');
 
 1;
 

@@ -1,0 +1,42 @@
+{
+   "sets" : [
+      {
+         "quantity" : "all",
+         "class" : "Member"
+      },
+      {
+         "quantity" : "all",
+         "class" : "Account"
+      },
+      {
+         "quantity" : "all",
+         "class" : "License"
+      },
+      {
+         "quantity" : "all",
+         "class" : "Image",
+         "external": {
+            "file": {
+                "class": "File",
+                "args": {"path":"__ATTR(image_files)__"}
+            }
+        }
+      {
+         "quantity" : "all",
+         "class" : "Contributor"
+      },
+      {
+         "quantity" : "all",
+         "class" : "Download"
+      }
+   ],
+   "might_have" : {
+      "fetch" : 0
+   },
+   "belongs_to" : {
+      "fetch" : 0
+   },
+   "has_many" : {
+      "fetch" : 0
+   }
+}

@@ -1,0 +1,861 @@
+---
+schema:
+  procedures: {}
+  tables:
+    account:
+      constraints:
+        - deferrable: 1
+          expression: ''
+          fields:
+            - account_id
+          match_type: ''
+          name: ''
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: PRIMARY KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - email
+          match_type: ''
+          name: account_email
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: UNIQUE
+      fields:
+        account_id:
+          data_type: integer
+          default_value: ~
+          is_auto_increment: 1
+          is_nullable: 0
+          is_primary_key: 1
+          is_unique: 0
+          name: account_id
+          order: 1
+          size:
+            - 0
+        email:
+          data_type: varchar
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 1
+          name: email
+          order: 3
+          size:
+            - 96
+        password:
+          data_type: char
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: password
+          order: 2
+          size:
+            - 40
+      indices: []
+      name: account
+      options: []
+      order: 1
+    contributor:
+      constraints:
+        - deferrable: 1
+          expression: ''
+          fields:
+            - contributor_id
+          match_type: ''
+          name: ''
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: PRIMARY KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - account_id
+          match_type: ''
+          name: contributor_fk_account_id
+          on_delete: CASCADE
+          on_update: ''
+          options: []
+          reference_fields:
+            - account_id
+          reference_table: account
+          type: FOREIGN KEY
+      fields:
+        account_id:
+          data_type: integer
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: account_id
+          order: 2
+          size:
+            - 0
+        contributor_id:
+          data_type: integer
+          default_value: ~
+          is_auto_increment: 1
+          is_nullable: 0
+          is_primary_key: 1
+          is_unique: 0
+          name: contributor_id
+          order: 1
+          size:
+            - 0
+        proper_name:
+          data_type: varchar
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: proper_name
+          order: 3
+          size:
+            - 96
+      indices:
+        - fields:
+            - account_id
+          name: contributor_idx_account_id
+          options: []
+          type: NORMAL
+      name: contributor
+      options: []
+      order: 3
+    download:
+      constraints:
+        - deferrable: 1
+          expression: ''
+          fields:
+            - member_id
+            - image_id
+          match_type: ''
+          name: ''
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: PRIMARY KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - image_id
+          match_type: ''
+          name: download_fk_image_id
+          on_delete: CASCADE
+          on_update: CASCADE
+          options: []
+          reference_fields:
+            - image_id
+          reference_table: image
+          type: FOREIGN KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - member_id
+          match_type: ''
+          name: download_fk_member_id
+          on_delete: CASCADE
+          on_update: CASCADE
+          options: []
+          reference_fields:
+            - member_id
+          reference_table: member
+          type: FOREIGN KEY
+      fields:
+        downloaded_on:
+          data_type: datetime
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: downloaded_on
+          order: 3
+          size:
+            - 0
+        image_id:
+          data_type: integer
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 1
+          is_unique: 0
+          name: image_id
+          order: 2
+          size:
+            - 0
+        member_id:
+          data_type: integer
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 1
+          is_unique: 0
+          name: member_id
+          order: 1
+          size:
+            - 0
+      indices:
+        - fields:
+            - image_id
+          name: download_idx_image_id
+          options: []
+          type: NORMAL
+        - fields:
+            - member_id
+          name: download_idx_member_id
+          options: []
+          type: NORMAL
+      name: download
+      options: []
+      order: 6
+    image:
+      constraints:
+        - deferrable: 1
+          expression: ''
+          fields:
+            - image_id
+          match_type: ''
+          name: ''
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: PRIMARY KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - contributor_id
+          match_type: ''
+          name: image_fk_contributor_id
+          on_delete: CASCADE
+          on_update: ''
+          options: []
+          reference_fields:
+            - contributor_id
+          reference_table: contributor
+          type: FOREIGN KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - license_id
+          match_type: ''
+          name: image_fk_license_id
+          on_delete: CASCADE
+          on_update: CASCADE
+          options: []
+          reference_fields:
+            - license_id
+          reference_table: license
+          type: FOREIGN KEY
+      fields:
+        contributor_id:
+          data_type: integer
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: contributor_id
+          order: 2
+          size:
+            - 0
+        description:
+          data_type: text
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: description
+          order: 5
+          size:
+            - 0
+        file:
+          data_type: varchar
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: file
+          order: 7
+          size:
+            - 0
+        image_id:
+          data_type: integer
+          default_value: ~
+          is_auto_increment: 1
+          is_nullable: 0
+          is_primary_key: 1
+          is_unique: 0
+          name: image_id
+          order: 1
+          size:
+            - 0
+        license_id:
+          data_type: integer
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: license_id
+          order: 3
+          size:
+            - 0
+        non_opened_license_url:
+          data_type: varchar
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: non_opened_license_url
+          order: 6
+          size:
+            - 256
+        title:
+          data_type: varchar
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: title
+          order: 4
+          size:
+            - 64
+      indices:
+        - fields:
+            - contributor_id
+          name: image_idx_contributor_id
+          options: []
+          type: NORMAL
+        - fields:
+            - license_id
+          name: image_idx_license_id
+          options: []
+          type: NORMAL
+      name: image
+      options: []
+      order: 5
+    license:
+      constraints:
+        - deferrable: 1
+          expression: ''
+          fields:
+            - license_id
+          match_type: ''
+          name: ''
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: PRIMARY KEY
+      fields:
+        description:
+          data_type: text
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: description
+          order: 3
+          size:
+            - 0
+        license_id:
+          data_type: integer
+          default_value: ~
+          is_auto_increment: 1
+          is_nullable: 0
+          is_primary_key: 1
+          is_unique: 0
+          name: license_id
+          order: 1
+          size:
+            - 0
+        title:
+          data_type: varchar
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: title
+          order: 2
+          size:
+            - 64
+      indices: []
+      name: license
+      options: []
+      order: 2
+    member:
+      constraints:
+        - deferrable: 1
+          expression: ''
+          fields:
+            - member_id
+          match_type: ''
+          name: ''
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: PRIMARY KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - account_id
+          match_type: ''
+          name: member_fk_account_id
+          on_delete: CASCADE
+          on_update: ''
+          options: []
+          reference_fields:
+            - account_id
+          reference_table: account
+          type: FOREIGN KEY
+      fields:
+        account_id:
+          data_type: integer
+          default_value: ~
+          is_nullable: 0
+          is_primary_key: 0
+          is_unique: 0
+          name: account_id
+          order: 2
+          size:
+            - 0
+        member_id:
+          data_type: integer
+          default_value: ~
+          is_auto_increment: 1
+          is_nullable: 0
+          is_primary_key: 1
+          is_unique: 0
+          name: member_id
+          order: 1
+          size:
+            - 0
+      indices:
+        - fields:
+            - account_id
+          name: member_idx_account_id
+          options: []
+          type: NORMAL
+      name: member
+      options: []
+      order: 4
+  triggers: {}
+  views: {}
+translator:
+  add_drop_table: 0
+  filename: ~
+  no_comments: 0
+  parser_args:
+    package: &1 !!perl/hash:Librestock::Schema
+      class_mappings:
+        DBIx::Class::DeploymentHandler::VersionStorage::Standard::VersionResult: __VERSION
+        Librestock::Schema::Result::Account: Account
+        Librestock::Schema::Result::Contributor: Contributor
+        Librestock::Schema::Result::Download: Download
+        Librestock::Schema::Result::Image: Image
+        Librestock::Schema::Result::License: License
+        Librestock::Schema::Result::Member: Member
+      source_registrations:
+        Account: !!perl/hash:DBIx::Class::ResultSource::Table
+          _columns:
+            account_id:
+              data_type: integer
+              is_auto_increment: 1
+            email:
+              data_type: varchar
+              size: 96
+            password:
+              data_type: char
+              encode_args:
+                algorithm: SHA-1
+                format: hex
+                salt_length: 0
+              encode_check_method: check_password
+              encode_class: Digest
+              encode_column: 1
+              size: 40
+          _columns_info_loaded: 0
+          _ordered_columns:
+            - account_id
+            - password
+            - email
+          _primaries: &2
+            - account_id
+          _relationships:
+            contributor:
+              attrs:
+                accessor: single
+                cascade_delete: 1
+                cascade_update: 1
+                join_type: LEFT
+              class: Librestock::Schema::Result::Contributor
+              cond:
+                foreign.account_id: self.account_id
+              source: Librestock::Schema::Result::Contributor
+            member:
+              attrs:
+                accessor: single
+                cascade_delete: 1
+                cascade_update: 1
+                join_type: LEFT
+              class: Librestock::Schema::Result::Member
+              cond:
+                foreign.account_id: self.account_id
+              source: Librestock::Schema::Result::Member
+          _unique_constraints:
+            account_email:
+              - email
+            primary: *2
+          name: account
+          result_class: Librestock::Schema::Result::Account
+          resultset_attributes: {}
+          resultset_class: Librestock::Schema::DefaultRS
+          schema: *1
+          source_name: Account
+        Contributor: !!perl/hash:DBIx::Class::ResultSource::Table
+          _columns:
+            account_id:
+              data_type: integer
+              is_foreign_key: 1
+            contributor_id:
+              data_type: integer
+              is_auto_increment: 1
+            proper_name:
+              data_type: varchar
+              size: 96
+          _columns_info_loaded: 0
+          _ordered_columns:
+            - contributor_id
+            - account_id
+            - proper_name
+          _primaries: &3
+            - contributor_id
+          _relationships:
+            account:
+              attrs:
+                accessor: single
+                fk_columns:
+                  account_id: 1
+                is_foreign_key_constraint: 1
+                undef_on_null_fk: 1
+              class: Librestock::Schema::Result::Account
+              cond:
+                foreign.account_id: self.account_id
+              source: Librestock::Schema::Result::Account
+            image_rs:
+              attrs:
+                accessor: single
+                cascade_delete: 1
+                cascade_update: 1
+                join_type: LEFT
+              class: Librestock::Schema::Result::Image
+              cond:
+                foreign.contributor_id: self.contributor_id
+              source: Librestock::Schema::Result::Image
+          _unique_constraints:
+            primary: *3
+          name: contributor
+          result_class: Librestock::Schema::Result::Contributor
+          resultset_attributes: {}
+          resultset_class: Librestock::Schema::ResultSet::Contributor
+          schema: *1
+          source_name: Contributor
+        Download: !!perl/hash:DBIx::Class::ResultSource::Table
+          _columns:
+            downloaded_on:
+              _ic_dt_method: datetime
+              _inflate_info:
+                deflate: !!perl/code '{ "DUMMY" }'
+                inflate: !!perl/code '{ "DUMMY" }'
+              data_type: datetime
+              datetime_undef_if_invalid: 1
+            image_id:
+              data_type: integer
+              is_foreign_key: 1
+            member_id:
+              data_type: integer
+              is_foreign_key: 1
+          _columns_info_loaded: 0
+          _ordered_columns:
+            - member_id
+            - image_id
+            - downloaded_on
+          _primaries: &4
+            - member_id
+            - image_id
+          _relationships:
+            image:
+              attrs:
+                accessor: single
+                fk_columns:
+                  image_id: 1
+                is_foreign_key_constraint: 1
+                undef_on_null_fk: 1
+              class: Librestock::Schema::Result::Image
+              cond:
+                foreign.image_id: self.image_id
+              source: Librestock::Schema::Result::Image
+            member:
+              attrs:
+                accessor: single
+                fk_columns:
+                  member_id: 1
+                is_foreign_key_constraint: 1
+                undef_on_null_fk: 1
+              class: Librestock::Schema::Result::Member
+              cond:
+                foreign.member_id: self.member_id
+              source: Librestock::Schema::Result::Member
+          _unique_constraints:
+            primary: *4
+          name: download
+          result_class: Librestock::Schema::Result::Download
+          resultset_attributes: {}
+          resultset_class: Librestock::Schema::DefaultRS
+          schema: *1
+          source_name: Download
+        Image: !!perl/hash:DBIx::Class::ResultSource::Table
+          _columns:
+            contributor_id:
+              data_type: integer
+              is_foreign_key: 1
+            description:
+              data_type: text
+            file:
+              _inflate_info:
+                deflate: !!perl/code '{ "DUMMY" }'
+                inflate: !!perl/code '{ "DUMMY" }'
+              data_type: varchar
+              fs_column_path: /Users/johnn/Desktop/Librestock-Server/share/image_files
+              is_fs_column: 1
+            image_id:
+              data_type: integer
+              is_auto_increment: 1
+            license_id:
+              data_type: integer
+              is_foreign_key: 1
+            non_opened_license_url:
+              data_type: varchar
+              nullable: 1
+              size: 256
+            title:
+              data_type: varchar
+              size: 64
+          _columns_info_loaded: 0
+          _ordered_columns:
+            - image_id
+            - contributor_id
+            - license_id
+            - title
+            - description
+            - non_opened_license_url
+            - file
+          _primaries: &5
+            - image_id
+          _relationships:
+            contributor:
+              attrs:
+                accessor: single
+                fk_columns:
+                  contributor_id: 1
+                is_foreign_key_constraint: 1
+                undef_on_null_fk: 1
+              class: Librestock::Schema::Result::Contributor
+              cond:
+                foreign.contributor_id: self.contributor_id
+              source: Librestock::Schema::Result::Contributor
+            download_rs:
+              attrs:
+                accessor: multi
+                cascade_copy: 1
+                cascade_delete: 1
+                join_type: LEFT
+              class: Librestock::Schema::Result::Download
+              cond:
+                foreign.image_id: self.image_id
+              source: Librestock::Schema::Result::Download
+            license:
+              attrs:
+                accessor: single
+                fk_columns:
+                  license_id: 1
+                is_foreign_key_constraint: 1
+                undef_on_null_fk: 1
+              class: Librestock::Schema::Result::License
+              cond:
+                foreign.license_id: self.license_id
+              source: Librestock::Schema::Result::License
+          _unique_constraints:
+            primary: *5
+          name: image
+          result_class: Librestock::Schema::Result::Image
+          resultset_attributes: {}
+          resultset_class: DBIx::Class::InflateColumn::FS::ResultSet
+          schema: *1
+          source_name: Image
+        License: !!perl/hash:DBIx::Class::ResultSource::Table
+          _columns:
+            description:
+              data_type: text
+            license_id:
+              data_type: integer
+              is_auto_increment: 1
+            title:
+              data_type: varchar
+              size: 64
+          _columns_info_loaded: 0
+          _ordered_columns:
+            - license_id
+            - title
+            - description
+          _primaries: &6
+            - license_id
+          _relationships:
+            image_rs:
+              attrs:
+                accessor: multi
+                cascade_copy: 1
+                cascade_delete: 1
+                join_type: LEFT
+              class: Librestock::Schema::Result::Image
+              cond:
+                foreign.license_id: self.license_id
+              source: Librestock::Schema::Result::Image
+          _unique_constraints:
+            primary: *6
+          name: license
+          result_class: Librestock::Schema::Result::License
+          resultset_attributes: {}
+          resultset_class: Librestock::Schema::DefaultRS
+          schema: *1
+          source_name: License
+        Member: !!perl/hash:DBIx::Class::ResultSource::Table
+          _columns:
+            account_id:
+              data_type: integer
+              is_foreign_key: 1
+            member_id:
+              data_type: integer
+              is_auto_increment: 1
+          _columns_info_loaded: 0
+          _ordered_columns:
+            - member_id
+            - account_id
+          _primaries: &7
+            - member_id
+          _relationships:
+            account:
+              attrs:
+                accessor: single
+                fk_columns:
+                  account_id: 1
+                is_foreign_key_constraint: 1
+                undef_on_null_fk: 1
+              class: Librestock::Schema::Result::Account
+              cond:
+                foreign.account_id: self.account_id
+              source: Librestock::Schema::Result::Account
+            download_rs:
+              attrs:
+                accessor: multi
+                cascade_copy: 1
+                cascade_delete: 1
+                join_type: LEFT
+              class: Librestock::Schema::Result::Download
+              cond:
+                foreign.member_id: self.member_id
+              source: Librestock::Schema::Result::Download
+          _unique_constraints:
+            primary: *7
+          name: member
+          result_class: Librestock::Schema::Result::Member
+          resultset_attributes: {}
+          resultset_class: Librestock::Schema::DefaultRS
+          schema: *1
+          source_name: Member
+        __VERSION: !!perl/hash:DBIx::Class::ResultSource::Table
+          _columns:
+            ddl:
+              data_type: text
+              is_nullable: 1
+            id:
+              data_type: int
+              is_auto_increment: 1
+            upgrade_sql:
+              data_type: text
+              is_nullable: 1
+            version:
+              data_type: varchar
+              size: 50
+          _columns_info_loaded: 0
+          _ordered_columns:
+            - id
+            - version
+            - ddl
+            - upgrade_sql
+          _primaries: &8
+            - id
+          _relationships: {}
+          _unique_constraints:
+            dbix_class_deploymenthandler_versions_version:
+              - version
+            primary: *8
+          name: dbix_class_deploymenthandler_versions
+          result_class: DBIx::Class::DeploymentHandler::VersionStorage::Standard::VersionResult
+          resultset_attributes: {}
+          resultset_class: DBIx::Class::DeploymentHandler::VersionStorage::Standard::VersionResultSet
+          schema: *1
+          source_name: __VERSION
+      storage: !!perl/hash:DBIx::Class::Storage::DBI::Pg
+        _conn_pid: 8976
+        _connect_info:
+          - DBI:Pg:dbname=template1;host=127.0.0.1;port=15432
+          - postgres
+          - ''
+        _dbh: !!perl/hash:DBI::db {}
+        _dbh_autocommit: 1
+        _dbh_details: {}
+        _dbh_gen: 0
+        _dbi_connect_info:
+          - DBI:Pg:dbname=template1;host=127.0.0.1;port=15432
+          - postgres
+          - ''
+          - &9
+            AutoCommit: 1
+            PrintError: 0
+            RaiseError: 1
+            ShowErrorStatement: 1
+        _dbic_connect_attributes: *9
+        _driver_determined: 1
+        _in_do_block: 0
+        _sql_maker: ~
+        _sql_maker_opts: {}
+        savepoints: []
+        schema: *1
+        transaction_depth: 0
+    sources:
+      - Member
+      - Account
+      - License
+      - Image
+      - Contributor
+      - Download
+  parser_type: SQL::Translator::Parser::DBIx::Class
+  producer_args: {}
+  producer_type: SQL::Translator::Producer::YAML
+  show_warnings: 0
+  trace: 0
+  version: 0.11010

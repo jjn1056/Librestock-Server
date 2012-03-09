@@ -26,6 +26,12 @@ column contributor_id => {
   description => {
     data_type => "text"},
 
+  non_opened_license_url => {
+    data_type => "varchar",
+    size => 256,
+    nullable => 1,
+  },
+
   file => {
     data_type => 'varchar',
     is_fs_column => 1,
@@ -42,8 +48,8 @@ belongs_to license => (
 has_many download_rs => (
   '::Download',  'image_id');
 
-many_to_many users_who_downloaded => (
-  'download_rs', 'user');
+many_to_many members_who_downloaded => (
+  'download_rs', 'member');
 
 1;
 
