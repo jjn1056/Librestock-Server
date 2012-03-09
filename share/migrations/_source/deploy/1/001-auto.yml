@@ -313,7 +313,7 @@ schema:
         non_opened_license_url:
           data_type: varchar
           default_value: ~
-          is_nullable: 0
+          is_nullable: 1
           is_primary_key: 0
           is_unique: 0
           name: non_opened_license_url
@@ -651,7 +651,7 @@ translator:
               is_foreign_key: 1
             non_opened_license_url:
               data_type: varchar
-              nullable: 1
+              is_nullable: 1
               size: 256
             title:
               data_type: varchar
@@ -821,7 +821,7 @@ translator:
           schema: *1
           source_name: __VERSION
       storage: !!perl/hash:DBIx::Class::Storage::DBI::Pg
-        _conn_pid: 9385
+        _conn_pid: 9528
         _connect_info:
           - DBI:Pg:dbname=template1;host=127.0.0.1;port=15432
           - postgres

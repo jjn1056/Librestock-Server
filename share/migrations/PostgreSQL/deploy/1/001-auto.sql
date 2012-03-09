@@ -1,6 +1,6 @@
 -- 
 -- Created by SQL::Translator::Producer::PostgreSQL
--- Created on Fri Mar  9 10:44:16 2012
+-- Created on Fri Mar  9 10:48:21 2012
 -- 
 ;
 --
@@ -58,7 +58,7 @@ CREATE TABLE "image" (
   "license_id" integer NOT NULL,
   "title" character varying(64) NOT NULL,
   "description" text NOT NULL,
-  "non_opened_license_url" character varying(256) NOT NULL,
+  "non_opened_license_url" character varying(256),
   "file" character varying NOT NULL,
   PRIMARY KEY ("image_id")
 );

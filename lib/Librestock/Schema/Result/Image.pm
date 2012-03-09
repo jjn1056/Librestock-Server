@@ -29,7 +29,7 @@ column contributor_id => {
   non_opened_license_url => {
     data_type => "varchar",
     size => 256,
-    nullable => 1,
+    is_nullable => 1,
   },
 
   file => {

@@ -28,7 +28,7 @@ my $contributor = $schema->resultset('Contributor')
 open(my $fh, '<', $FindBin::Bin) ||
   die "Can't open the filehandle, test is trash!";
 
-$contributor->add_to_image_rs({
+$contributor->create_related('image_rs', {
   license => {title => 'Attribution'},
   file => $fh,
   title => '',
