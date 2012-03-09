@@ -1,6 +1,6 @@
 -- 
 -- Created by SQL::Translator::Producer::PostgreSQL
--- Created on Fri Mar  9 09:32:17 2012
+-- Created on Fri Mar  9 10:44:16 2012
 -- 
 ;
 --
@@ -21,8 +21,8 @@ CREATE TABLE "account" (
 CREATE TABLE "license" (
   "license_id" serial NOT NULL,
   "title" character varying(64) NOT NULL,
-  "description" text NOT NULL,
-  PRIMARY KEY ("license_id")
+  PRIMARY KEY ("license_id"),
+  CONSTRAINT "license_title" UNIQUE ("title")
 );
 
 ;

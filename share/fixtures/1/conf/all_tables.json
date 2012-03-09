@@ -21,6 +21,7 @@
                 "args": {"path":"__ATTR(image_files)__"}
             }
         }
+      },
       {
          "quantity" : "all",
          "class" : "Contributor"

@@ -330,8 +330,6 @@ translator:
           source_name: Image
         License: !!perl/hash:DBIx::Class::ResultSource::Table
           _columns:
-            description:
-              data_type: text
             license_id:
               data_type: integer
               is_auto_increment: 1
@@ -342,7 +340,6 @@ translator:
           _ordered_columns:
             - license_id
             - title
-            - description
           _primaries: &6
             - license_id
           _relationships:
@@ -357,6 +354,8 @@ translator:
                 foreign.license_id: self.license_id
               source: Librestock::Schema::Result::Image
           _unique_constraints:
+            license_title:
+              - title
             primary: *6
           name: license
           result_class: Librestock::Schema::Result::License
@@ -442,7 +441,7 @@ translator:
           schema: *1
           source_name: __VERSION
       storage: !!perl/hash:DBIx::Class::Storage::DBI::Pg
-        _conn_pid: 8976
+        _conn_pid: 9385
         _connect_info:
           - DBI:Pg:dbname=template1;host=127.0.0.1;port=15432
           - postgres

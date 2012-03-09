@@ -8,12 +8,9 @@ primary_column license_id => {
   data_type => "integer",
   is_auto_increment => 1};
 
-column title => {
+unique_column title => {
     data_type => "varchar",
     size => 64},
-
-  description => {
-    data_type => "text"};
 
 has_many image_rs => (
   '::Image', 'license_id');

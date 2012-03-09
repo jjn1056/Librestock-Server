@@ -1,0 +1,39 @@
+#!/usr/bin/env perl
+
+use FindBin;
+use Librestock::Web;
+
+my $schema = Librestock::Web->model('Schema')
+  ->schema;
+
+$schema->resultset('License')
+  ->create({title => $_}) for qw(
+    Attribution Attribution-NoDerivs Attribution-NonCommercial-ShareAlike 
+    Attribution-ShareAlike Attribution-NonCommercial
+    Attribution-NonCommercial-NoDerivs );
+
+$schema->resultset('Member')
+  ->create({account => {
+    email=>'jnapiorkowski@shutterstock.com',
+    password=>'abc123'}});
+
+my $contributor = $schema->resultset('Contributor')
+  ->create({
+    proper_name => 'Logan Bell',
+    account => {
+      email=>'lbell@shutterstock.com',
+      password=>'abc123'}});
+
+
+open(my $fh, '<', $FindBin::Bin) ||
+  die "Can't open the filehandle, test is trash!";
+
+$contributor->add_to_image_rs({
+  license => {title => 'Attribution'},
+  file => $fh,
+  title => '',
+  description => ''});
+
+close($fh);
+
+ 

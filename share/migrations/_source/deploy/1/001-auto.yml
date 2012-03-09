@@ -358,17 +358,19 @@ schema:
           reference_fields: []
           reference_table: ''
           type: PRIMARY KEY
+        - deferrable: 1
+          expression: ''
+          fields:
+            - title
+          match_type: ''
+          name: license_title
+          on_delete: ''
+          on_update: ''
+          options: []
+          reference_fields: []
+          reference_table: ''
+          type: UNIQUE
       fields:
-        description:
-          data_type: text
-          default_value: ~
-          is_nullable: 0
-          is_primary_key: 0
-          is_unique: 0
-          name: description
-          order: 3
-          size:
-            - 0
         license_id:
           data_type: integer
           default_value: ~
@@ -385,7 +387,7 @@ schema:
           default_value: ~
           is_nullable: 0
           is_primary_key: 0
-          is_unique: 0
+          is_unique: 1
           name: title
           order: 2
           size:
@@ -708,8 +710,6 @@ translator:
           source_name: Image
         License: !!perl/hash:DBIx::Class::ResultSource::Table
           _columns:
-            description:
-              data_type: text
             license_id:
               data_type: integer
               is_auto_increment: 1
@@ -720,7 +720,6 @@ translator:
           _ordered_columns:
             - license_id
             - title
-            - description
           _primaries: &6
             - license_id
           _relationships:
@@ -735,6 +734,8 @@ translator:
                 foreign.license_id: self.license_id
               source: Librestock::Schema::Result::Image
           _unique_constraints:
+            license_title:
+              - title
             primary: *6
           name: license
           result_class: Librestock::Schema::Result::License
@@ -820,7 +821,7 @@ translator:
           schema: *1
           source_name: __VERSION
       storage: !!perl/hash:DBIx::Class::Storage::DBI::Pg
-        _conn_pid: 8976
+        _conn_pid: 9385
         _connect_info:
           - DBI:Pg:dbname=template1;host=127.0.0.1;port=15432
           - postgres
