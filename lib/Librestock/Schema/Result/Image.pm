@@ -12,15 +12,18 @@ primary_key 'image_id';
 
 column contributor_id => {
   data_type => "integer",
-  is_foreign_key => 1};
+  is_foreign_key => 1},
 
-column license_id => {
-  data_type => "integer",
-  is_foreign_key => 1};
+  license_id => {
+    data_type => "integer",
+    is_foreign_key => 1};
 
 
-belongs_to contributor => ('::Contributor', 'contributor_id');
-belongs_to license => ('::License', 'contributor_id');
+belongs_to contributor =>
+  ('::Contributor', 'contributor_id');
+
+belongs_to license =>
+  ('::License', 'license_id');
 
 1;
 

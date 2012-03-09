@@ -10,7 +10,8 @@ column account_id => {
 
 primary_key 'account_id';
 
-might_have contributor => ( '::Contributor', 'account_id');
+might_have contributor =>
+  ( '::Contributor', 'account_id');
 
 1;
 

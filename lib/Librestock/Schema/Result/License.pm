@@ -11,8 +11,10 @@ column license_id => {
 primary_key 'license_id';
 
 might_have is_default_for_contributor =>
-  ( '::Co<D-x>ntributor', 'license_id');
+  ( '::Contributor', 'license_id');
 
+has_many image_rs =>
+  ( '::Image', 'license_id');
 
 1;
 

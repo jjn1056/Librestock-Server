@@ -14,14 +14,13 @@ column account_id => {
   data_type => "integer",
   is_foreign_key => 1},
 
-column license_id => {
-  data_type => "integer",
-  is_foreign_key => 1};
+  license_id => {
+    data_type => "integer",
+    is_foreign_key => 1};
 
 belongs_to account => ( '::Account', 'account_id');
 belongs_to default_license => ( '::License', 'license_id');
 might_have image_rs => ( '::Image', 'contributor_id');
-might_have upload_rs => ( '::Upload', 'contributor_id');
 
 1;
 
