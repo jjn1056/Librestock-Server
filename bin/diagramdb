@@ -1,0 +1,26 @@
+#!/usr/bin/env perl
+
+use Modern::Perl;
+use SQL::Translator;
+use Librestock::Schema;
+
+my $schema = Librestock::Schema->connect();
+my $trans = SQL::Translator->new(
+    show_warnings=>1, trace=>1,
+    parser        => 'SQL::Translator::Parser::DBIx::Class',
+    parser_args   => { package => $schema },
+    producer      => 'Diagram',
+    producer      => 'GraphViz',
+    producer_args => {
+        out_file         => 'db-diagram-v' . $schema->VERSION . '.png',
+        bgcolor          => 'lightgoldenrodyellow',
+        layout           => 'neato',
+        show_constraints => 1,
+        show_datatypes   => 1,
+        show_sizes       => 1,
+        show_fk_only     => 0,
+    } );
+
+$trans->translate
+  or die $trans->error;
+
