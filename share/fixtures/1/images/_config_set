@@ -1,0 +1,28 @@
+$VAR1 = {
+          'sets' => [
+                      {
+                        'quantity' => 'all',
+                        'external' => {
+                                        'file' => {
+                                                    'args' => {
+                                                                'path' => '__ATTR(image_files)__'
+                                                              },
+                                                    'class' => 'File'
+                                                  }
+                                      },
+                        'class' => 'Image'
+                      }
+                    ],
+          'might_have' => {
+                            'quantity' => 'all',
+                            'fetch' => 1
+                          },
+          'belongs_to' => {
+                            'quantity' => 'all',
+                            'fetch' => 1
+                          },
+          'has_many' => {
+                          'quantity' => 'all',
+                          'fetch' => 1
+                        }
+        };

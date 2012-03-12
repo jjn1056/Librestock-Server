@@ -14,13 +14,7 @@
       },
       {
          "quantity" : "all",
-         "class" : "Image",
-         "external": {
-            "file": {
-                "class": "File",
-                "args": {"path":"__ATTR(image_files)__"}
-            }
-        }
+         "class" : "Image"
       },
       {
          "quantity" : "all",

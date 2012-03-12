@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'Tip: If you are running the mosquitoes can\'t get you!',
+           file        => 'D2/D29B33F0-6A16-11E1-8363-A7403ECB8482',
+           image_id    => 114,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Muggy by the Charles River'
+         };

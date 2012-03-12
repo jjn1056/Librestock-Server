@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'Went for a visit, found this in a park.  Not sure if it is art, game, or both.',
+           file        => 'D2/D24EDA00-6A16-11E1-B1B1-A7403ECB8482',
+           image_id    => 78,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Boston Playground'
+         };

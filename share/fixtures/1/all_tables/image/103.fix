@@ -1,0 +1,18 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => "Always wanted to get close to these guys and I discovered something when".
+	" I did on Tuesday: they squeak and lull.  So hot and dry it was that a n".
+	"ap right there was tempting.  No shade anywhere though.  (I'm jetlagged ".
+	"and it's almost 3 AM so sleeping it's a natural topic).\n\nI took a whole ".
+	"roll and plenty of digital shots (easy, there are thousands of these tur".
+	"bines in the Altamont wind farm) so I'll be posting more.  Warned.\n\nSee ".
+	"where the photo was taken at &lt;a href=&quot;http://maps.yuan.cc/&quot;".
+	" rel=&quot;nofollow&quot;&gt;maps.yuan.cc/&lt;/a&gt;.",
+           file        => 'D2/D2823828-6A16-11E1-8957-A7403ECB8482',
+           image_id    => 103,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'The Skinnies'
+         };

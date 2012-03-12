@@ -4,6 +4,7 @@ our $VERSION = '0.01';
 
 use Moose;
 use Plack::Builder;
+use Plack::App::Directory;
 use Catalyst qw/
   ConfigLoader
 /;
@@ -21,6 +22,9 @@ around 'psgi_app', sub {
   my $psgi = $self->$orig(@args);
 
   builder {
+    mount '/assets',
+      Plack::App::Directory->new({
+        root => $self->path_to('share','assets') })->to_app,
     mount '/', builder {
       enable_if {
         $self->debug;

@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'In the background, appear two of the best known landmarks in Quito: &lt;a href=&quot;http://en.wikipedia.org/wiki/El_Panecillo&quot;&gt;the Panecillo hill&lt;/a&gt; and the Virgen de Quito that tops it --the largest aluminum statue in the world (!).',
+           file        => 'D2/D2A35E7C-6A16-11E1-A82F-A7403ECB8482',
+           image_id    => 118,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Colonial Skyline'
+         };

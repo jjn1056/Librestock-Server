@@ -1,0 +1,12 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => "Yay!\n\nDigital version &lt;a href=&quot;http://www.flickr.com/photos/dvai".
+	"res/435208005/&quot;&gt;here&lt;/a&gt;.",
+           file        => 'D2/D2863EE6-6A16-11E1-972B-A7403ECB8482',
+           image_id    => 105,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Look!  A Balloon!'
+         };

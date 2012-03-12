@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'No description',
+           file        => 'D2/D27CF9A8-6A16-11E1-9E57-A7403ECB8482',
+           image_id    => 101,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Fence Over Hills'
+         };

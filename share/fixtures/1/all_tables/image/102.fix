@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'No description',
+           file        => 'D2/D2805ED6-6A16-11E1-A9DD-A7403ECB8482',
+           image_id    => 102,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Siglo 20 The Mission'
+         };

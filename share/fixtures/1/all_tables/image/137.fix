@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'Do I have a digital of this?  Why, &lt;a href=&quot;http://www.flickr.com/photos/dvaires/150153491/&quot;&gt;yes&lt;/a&gt;, thanks for asking.',
+           file        => 'D2/D2C775D2-6A16-11E1-903E-A7403ECB8482',
+           image_id    => 137,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Do Not Remove'
+         };

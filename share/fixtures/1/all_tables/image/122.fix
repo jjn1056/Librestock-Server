@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'I\'ve got a digital version of this one &lt;a href=&quot;http://www.flickr.com/photos/dvaires/508837347/&quot;&gt;somewhere&lt;/a&gt;.',
+           file        => 'D2/D2AA7400-6A16-11E1-9710-A7403ECB8482',
+           image_id    => 122,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Old Farmer Xing (Film)'
+         };

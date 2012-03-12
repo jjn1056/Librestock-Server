@@ -1,0 +1,15 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => "May 1st; picked by your friendly undocumented worker.  Hats off.\n\nFilm v".
+	"ersion &lt;a href=&quot;http://www.flickr.com/photos/dvaires/166691841/&".
+	"quot;&gt;HERE&lt;/a&gt;.\n\nSee where the photo was taken at &lt;a href=&q".
+	"uot;http://maps.yuan.cc/&quot; rel=&quot;nofollow&quot;&gt;maps.yuan.cc/".
+	"&lt;/a&gt;.",
+           file        => 'D2/D272931E-6A16-11E1-8A73-A7403ECB8482',
+           image_id    => 97,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Helloooooo Sweet Tomatoes!'
+         };

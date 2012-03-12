@@ -9,6 +9,9 @@ __PACKAGE__->load_namespaces(
   default_resultset_class => 'DefaultRS',
 );
 
+__PACKAGE__->mk_group_accessors(
+  simple => qw/image_file_path/);
+
 1;
 
 =head1 NAME

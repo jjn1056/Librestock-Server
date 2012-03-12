@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'The White House makes an appearance too.',
+           file        => 'D2/D26331C6-6A16-11E1-A128-A7403ECB8482',
+           image_id    => 89,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'El Dorado'
+         };

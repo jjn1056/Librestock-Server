@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'This one is pretty much the same angle as &lt;a href=&quot;http://www.flickr.com/photos/dvaires/194385901/&quot;&gt;this one&lt;/a&gt;.  Finally finished the roll and got it developed.  Apparently, I really liked this view.',
+           file        => 'D2/D2402EA6-6A16-11E1-8E9C-A7403ECB8482',
+           image_id    => 71,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Bleached'
+         };

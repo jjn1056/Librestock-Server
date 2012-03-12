@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'I took this with expired film... and a bit earlier than &lt;a href=&quot;http://www.flickr.com/photos/dvaires/2411182139/in/photostream/&quot;&gt;this&lt;/a&gt;.',
+           file        => 'D2/D2BCDE92-6A16-11E1-9CED-A7403ECB8482',
+           image_id    => 131,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Salt Marsh'
+         };

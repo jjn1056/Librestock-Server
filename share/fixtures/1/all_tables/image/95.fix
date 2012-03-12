@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'The ball, this morning.',
+           file        => 'D2/D26E374C-6A16-11E1-B0FD-A7403ECB8482',
+           image_id    => 95,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'The Big Ball'
+         };

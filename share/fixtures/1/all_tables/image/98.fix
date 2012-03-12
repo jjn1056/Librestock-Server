@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'See where the photo was taken at &lt;a href=&quot;http://maps.yuan.cc/&quot; rel=&quot;nofollow&quot;&gt;maps.yuan.cc/&lt;/a&gt;.',
+           file        => 'D2/D2749380-6A16-11E1-B6A5-A7403ECB8482',
+           image_id    => 98,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'From My Kitchen, Out'
+         };

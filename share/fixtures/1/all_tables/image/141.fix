@@ -1,0 +1,14 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => "The digital version of this same shot &lt;a href=&quot;http://www.flickr".
+	".com/photos/dvaires/83285288/in/set-1503369/&quot;&gt;HERE&lt;/a&gt;.\n\nS".
+	"ee where the photo was taken at &lt;a href=&quot;http://maps.yuan.cc/&qu".
+	"ot; rel=&quot;nofollow&quot;&gt;maps.yuan.cc/&lt;/a&gt;.",
+           file        => 'D2/D2D1B75E-6A16-11E1-B05E-A7403ECB8482',
+           image_id    => 141,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Jack London Square Pier (The Film Version)'
+         };

@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'Attack dog on premises.',
+           file        => 'D2/D2665AE0-6A16-11E1-A569-A7403ECB8482',
+           image_id    => 91,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Lenox Junk'
+         };

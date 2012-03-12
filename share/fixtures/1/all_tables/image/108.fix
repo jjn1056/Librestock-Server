@@ -1,0 +1,12 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => "High noon.\n\nWish it weren't crooked, but I don't want to crop it further".
+	"!",
+           file        => 'D2/D28DF802-6A16-11E1-8F9D-A7403ECB8482',
+           image_id    => 108,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'San Francisco Church'
+         };

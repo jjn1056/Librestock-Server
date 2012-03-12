@@ -1,0 +1,12 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => "I do miss the tomatoes.\n\nDigital version &lt;a href=&quot;http://www.fli".
+	"ckr.com/photos/dvaires/138828938/&quot;&gt;HERE&lt;/a&gt;.",
+           file        => 'D2/D29737D2-6A16-11E1-BA6F-A7403ECB8482',
+           image_id    => 112,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Vine Tomato'
+         };

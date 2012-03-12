@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'By noon, we had a California sky.',
+           file        => 'D2/D25C4BA4-6A16-11E1-AA9F-A7403ECB8482',
+           image_id    => 85,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Rolling Out'
+         };

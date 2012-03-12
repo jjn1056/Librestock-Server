@@ -1,10 +1,7 @@
 package Librestock::Schema::Result::Image;
 
-use Path::Class::File;
 use Librestock::Schema::Candy
   -components => ['InflateColumn::FS'];
-
-__PACKAGE__->mk_group_accessors(inherited => qw/image_file_path/);
 
 table 'image';
 
@@ -50,16 +47,11 @@ has_many download_rs => (
 many_to_many members_who_downloaded => (
   'download_rs', 'member');
 
-
 sub _fs_column_storage {
   my ($self, @args) = @_;
-  my $part = $self->next::method(@args);
-  my $path = Path::Class::File->new($self->image_file_path, $part);
-
-  warn $self->image_file_path;
-  warn $path;
-
-  return $path;
+  Path::Class::File->new(
+    $self->result_source->schema->image_file_path,
+    $self->next::method(@args));
 }
 
 1;

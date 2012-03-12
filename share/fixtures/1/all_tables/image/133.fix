@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'Yeah, I\'ve got a tripod too.  Very windy up there.',
+           file        => 'D2/D2C0AB1C-6A16-11E1-A234-A7403ECB8482',
+           image_id    => 133,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Manhattan in Black'
+         };

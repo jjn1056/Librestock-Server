@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'Different angle, in black &amp;amp; white &lt;a href=&quot;http://www.flickr.com/photos/dvaires/150867643/&quot;&gt;HERE&lt;/a&gt;.',
+           file        => 'D2/D2C9C86E-6A16-11E1-8805-A7403ECB8482',
+           image_id    => 138,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Bystanders'
+         };

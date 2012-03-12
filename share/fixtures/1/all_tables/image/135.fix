@@ -1,0 +1,15 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => "&lt;a href=&quot;http://www.flickr.com/photos/dvaires/211301798/&quot;&g".
+	"t;Here&lt;/a&gt; and &lt;a href=&quot;http://www.flickr.com/photos/dvair".
+	"es/326695409/&quot;&gt;here&lt;/a&gt; in color film.\n\nSee where the phot".
+	"o was taken at &lt;a href=&quot;http://maps.yuan.cc/&quot; rel=&quot;nof".
+	"ollow&quot;&gt;maps.yuan.cc/&lt;/a&gt;.",
+           file        => 'D2/D2C3D5A8-6A16-11E1-B9B7-A7403ECB8482',
+           image_id    => 135,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Quaint'
+         };

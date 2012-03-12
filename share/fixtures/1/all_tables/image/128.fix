@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'Saw this while sitting at a traffic light.  An eatery in Quito\'s colonial center.',
+           file        => 'D2/D2B6DCE0-6A16-11E1-9426-A7403ECB8482',
+           image_id    => 128,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Lunch Place'
+         };

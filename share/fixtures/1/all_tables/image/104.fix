@@ -1,0 +1,19 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => "The everyday blue skies that were the norm while I lived in California's".
+	" Central Valley were nice but, after months of barely a cloud, I had sta".
+	"rted wondering where I could buy or rent a tape of a nice rain storm.  Y".
+	"es, a VHS tape.  Rain was too much of an old memory and it seemed improp".
+	"er to want to watch it on DVD.\n\nAh, crazy days.\n\nMy first morning waking".
+	" up back in Massachusetts was gorgeously drab and I was glad --who's got".
+	" a VHS player anymore anyway?\n\nSee the digital version FREE &lt;a href=&".
+	"quot;http://www.flickr.com/photos/dvaires/159940323/&quot;&gt;here&lt;/a".
+	"&gt;!",
+           file        => 'D2/D2845504-6A16-11E1-A3C2-A7403ECB8482',
+           image_id    => 104,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Grey!'
+         };

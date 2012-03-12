@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'Film version &lt;a href=&quot;http://www.flickr.com/photos/dvaires/447155318/&quot;&gt;here&lt;/a&gt;.',
+           file        => 'D2/D2600762-6A16-11E1-B843-A7403ECB8482',
+           image_id    => 87,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Standoff'
+         };

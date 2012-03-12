@@ -1,0 +1,14 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => "&lt;a href=&quot;http://www.flickr.com/photos/dvaires/211250138/&quot;&g".
+	"t;This way&lt;/a&gt; to film version.\n\nSee where the photo was taken at ".
+	"&lt;a href=&quot;http://maps.yuan.cc/&quot; rel=&quot;nofollow&quot;&gt;".
+	"maps.yuan.cc/&lt;/a&gt;.",
+           file        => 'D2/D29939CE-6A16-11E1-80D7-A7403ECB8482',
+           image_id    => 113,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Squares'
+         };

@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'One of my last from Merced.',
+           file        => 'D2/D2480400-6A16-11E1-B857-A7403ECB8482',
+           image_id    => 75,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Dust &amp; Yellow'
+         };

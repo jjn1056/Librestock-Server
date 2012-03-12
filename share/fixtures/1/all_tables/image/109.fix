@@ -1,0 +1,14 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => "Film version &lt;a href=&quot;http://www.flickr.com/photos/dvaires/21124".
+	"5920/&quot;&gt;here&lt;/a&gt;.\n\nSee where the photo was taken at &lt;a h".
+	"ref=&quot;http://maps.yuan.cc/&quot; rel=&quot;nofollow&quot;&gt;maps.yu".
+	"an.cc/&lt;/a&gt;.",
+           file        => 'D2/D2915BC8-6A16-11E1-B4B9-A7403ECB8482',
+           image_id    => 109,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Milk'
+         };

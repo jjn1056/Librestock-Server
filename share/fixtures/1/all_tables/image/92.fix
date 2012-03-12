@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'No description',
+           file        => 'D2/D267E6C6-6A16-11E1-B578-A7403ECB8482',
+           image_id    => 92,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Boston Pier'
+         };

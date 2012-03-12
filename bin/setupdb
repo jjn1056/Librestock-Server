@@ -2,14 +2,23 @@
 
 use FindBin;
 use Librestock::Web;
+use Lucy::Simple;
+
+my $index_dir = Librestock::Web->path_to('share','lindex');
+my $index = Lucy::Simple->new(
+    path => $index_dir,
+    language => 'en'
+);
 
 my $schema = Librestock::Web->model('Schema')
   ->schema;
 
 $schema->resultset('License')
   ->create({title => $_}) for qw(
-    Attribution Attribution-NoDerivs Attribution-NonCommercial-ShareAlike 
-    Attribution-ShareAlike Attribution-NonCommercial
+    Attribution Attribution-NoDerivs
+    Attribution-NonCommercial-ShareAlike
+    Attribution-ShareAlike
+    Attribution-NonCommercial
     Attribution-NonCommercial-NoDerivs );
 
 $schema->resultset('Member')
@@ -24,18 +33,29 @@ my $contributor = $schema->resultset('Contributor')
       email=>'lbell@shutterstock.com',
       password=>'abc123'}});
 
+my $dir = $FindBin::Bin;
+my $conf = require "$dir/meta.pl";
+foreach my $key (keys %$conf) {
+  my $data = $conf->{$key};
+  open(my $fh, '<', "$dir/$data->{path}") ||
+    die "Can't open the filehandle!";
 
-my $file = $FindBin::Bin;
-open(my $fh, '<', "$file/setupdb") ||
-  die "Can't open the filehandle, test is trash!";
+  my $created = $contributor->create_related(
+    'image_rs', {
+      license => {title => 'Attribution'},
+      file => $fh,
+      title => $data->{title},
+      description => $data->{description}||"No description" });
 
-$contributor->create_related(
-  'image_rs', {
-    license => {title => 'Attribution'},
-    file => $fh,
-    title => '1',
-    description => '2'});
+  $index->add_doc({
+    title => $data->{title},
+    content => $data->{description} ||"No description",
+    id => $created->image_id,
+    description => $data->{description} ||"No description" });
 
-close($fh);
 
- 
+
+  close($fh);
+}
+
+

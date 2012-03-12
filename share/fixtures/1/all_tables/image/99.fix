@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => '&lt;a href=&quot;http://www.flickr.com/photos/dvaires/150163794/&quot;&gt;This way&lt;/a&gt; to digital version.',
+           file        => 'D2/D276319A-6A16-11E1-821D-A7403ECB8482',
+           image_id    => 99,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Milk on Mars'
+         };

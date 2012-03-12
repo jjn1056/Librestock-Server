@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'No description',
+           file        => 'D2/D2C58F4C-6A16-11E1-AD92-A7403ECB8482',
+           image_id    => 136,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Winter Season &amp; la Misma Estacin'
+         };

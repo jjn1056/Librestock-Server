@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 23,
+           description => 'No description',
+           file        => 'D2/D28A2CE0-6A16-11E1-AFBC-A7403ECB8482',
+           image_id    => 106,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Hazy Skyline'
+         };

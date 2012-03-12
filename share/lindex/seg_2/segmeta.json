@@ -1,0 +1,38 @@
+{
+  "documents": {
+    "format": "2"
+  },
+  "highlight": {
+    "format": "1"
+  },
+  "lexicon": {
+    "counts": {
+      "content": "284",
+      "description": "284",
+      "id": "74",
+      "title": "142"
+    },
+    "format": "3",
+    "index_counts": {
+      "content": "3",
+      "description": "3",
+      "id": "1",
+      "title": "2"
+    }
+  },
+  "postings": {
+    "format": "1"
+  },
+  "segmeta": {
+    "count": "74",
+    "field_names": [
+      "",
+      "description",
+      "title",
+      "id",
+      "content"
+    ],
+    "format": "1",
+    "name": "seg_2"
+  }
+}

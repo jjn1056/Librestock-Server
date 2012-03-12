@@ -821,7 +821,7 @@ translator:
           schema: *1
           source_name: __VERSION
       storage: !!perl/hash:DBIx::Class::Storage::DBI::Pg
-        _conn_pid: 9528
+        _conn_pid: 9903
         _connect_info:
           - DBI:Pg:dbname=template1;host=127.0.0.1;port=15432
           - postgres

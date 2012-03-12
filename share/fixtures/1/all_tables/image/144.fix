@@ -1,0 +1,11 @@
+$HASH1 = {
+           contributor_id
+                       => 28,
+           description => 'No description',
+           file        => 'F6/F6DB58B6-6A1C-11E1-8EB1-3F683ECB8482',
+           image_id    => 144,
+           license_id  => 137,
+           non_opened_license_url
+                       => undef,
+           title       => 'Boston Minaret'
+         };
